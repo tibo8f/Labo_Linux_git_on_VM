@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Liste des formations</title>
+        <link rel="stylesheet" href="view/style.css" >
+    </head>  
+    <body>
+        <h1 style="text-align: center;">IT Academy</h1>
+        <h2>Formations disponibles</h2>
+        <a href="/user/bag">Voir le panier</a>
+        <a href="/user/connection">Se connecter</a>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="1">Id</th><th>Nom</th><th>Prix</th><th>Début</th><th>Fin</th><th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for (let i = 0 ; i < formations.length ; i++) { %>
+                <tr>
+                    <td><%= formations[i].idformation %></td>
+                    <td><%= formations[i].nameformation %></td>
+                    <td><%= formations[i].priceformation %></td>
+                    <td><%= formations[i].startformation %></td>
+                    <td><%= formations[i].endformation %></td>
+                    <td><a href="/user/inscription/<%= formations[i].idformation %>">S'inscrire</a></td>
+                </tr>
+                <% } %> 
+            </tbody>
+        </table>
+    </body>
+</html>

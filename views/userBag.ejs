@@ -1,0 +1,30 @@
+<html>
+  <head>
+      <title>Liste des formations</title>
+      <link rel="stylesheet" href="/css/style.css" >
+  </head>  
+  <body>
+      <h1 style="text-align: center;">IT Academy</h1>
+      <p>Bienvenue <%= userPseudo %></p>
+      <p>Ma formation <%= userFormations%></p>
+      <h2>Mon panier</h2>
+      <table>
+        <thead>
+            <tr>
+                <th colspan="1">Id</th><th>Nom</th><th>Prix</th><th>Début</th><th>Fin</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let i = 0 of userFormations) { console.log("id " + i + "type " + typeof(i)) %>
+            <tr>
+                <td><%= formations[i].idformation %></td>
+                <td><%= formations[i].nameformation %></td>
+                <td><%= formations[i].priceformation %></td>
+                <td><%= formations[i].startformation %></td>
+                <td><%= formations[i].endformation %></td>
+            </tr>
+            <% } %> 
+        </tbody>
+    </table>
+  </body>
+</html>
